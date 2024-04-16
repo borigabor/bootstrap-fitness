@@ -1,0 +1,33 @@
+$primary: #ff5421;
+$dark: #1d0e15;
+
+@import "../node_modules/bootstrap/scss/_functions";
+@import "../node_modules/bootstrap/scss/_variables";
+
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+
+@mixin cover($image){
+    background: url($image);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+body {
+    background-color: #1d0e15;
+    color: #fff;
+}
+
+ul { list-style: none; }
+
+#home { @include cover('../assets/home-bg.jpg'); }
+
+.cover { @include cover('../assets/counter-bg.jpg'); }
+
+.box {
+    transition: all 2s linear;
+    &:hover img { transform: scale(1.1);}
+}
+
+.pricing-card { transform:  scale(1.2);}
