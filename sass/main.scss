@@ -14,19 +14,23 @@ $dark: #1d0e15;
     background-position: center;
 }
 
+*{
+    transition: all .2s linear;
+    list-style: none;
+}
+
 body {
     background-color: #1d0e15;
     color: #fff;
 }
 
-ul { list-style: none; }
+a { text-decoration: none }
 
 #home { @include cover('../assets/home-bg.jpg'); }
 
 .cover { @include cover('../assets/counter-bg.jpg'); }
 
 .box {
-    transition: all 2s linear;
     &:hover img { transform: scale(1.1);}
 }
 
